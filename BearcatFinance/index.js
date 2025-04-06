@@ -7,18 +7,18 @@ const port = 3002;
 // require('./redis/subcriber/redisSubscriber');
 
 // uncomment to connect to amazon database
-// const sequelize = new Sequelize('bearcat_finance_app', 'admin', 'Gdpteam3', {
-//   host: 'database-1.cbm6q2wayzrp.us-east-2.rds.amazonaws.com',
-//   dialect: 'mysql',
-//   port: 3306, 
-// });
-
-//connection for local database
-const sequelize = new Sequelize('bearcat_finance_app', 'root', 'Gdpteam3', {
-  host: 'localhost',
+const sequelize = new Sequelize('bearcat_finance_app', 'admin', 'Gdpteam3', {
+  host: 'database-1.cbm6q2wayzrp.us-east-2.rds.amazonaws.com',
   dialect: 'mysql',
   port: 3306, 
 });
+
+//connection for local database
+// const sequelize = new Sequelize('bearcat_finance_app', 'root', 'Gdpteam3', {
+//   host: 'localhost',
+//   dialect: 'mysql',
+//   port: 3306, 
+// });
 
 sequelize.authenticate()
   .then(() => {
